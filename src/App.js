@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import './index.css';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import OptionPage from './optionPage'; 
+import HomePage from './HomePage';  
 
+// NavBar Component
+function NavBar() {
+  return (
+    <>
+    <nav className="bg-gray-800 text-white p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="space-x-4">
+          <Link to="/option-page" className="py-2 px-4 rounded bg-blue-500 hover:bg-blue-700 transition duration-300">Option Page</Link>
+         
+        </div>
+      </div>
+    </nav>
+    </>
+  );
+}
+
+// App Component
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/option-page" element={<OptionPage />} />
+        </Routes>
+    </BrowserRouter>
   );
 }
 
