@@ -1,4 +1,5 @@
 // App.js
+//            python manage.py runserver
 import React from 'react';
 import './index.css';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
@@ -12,6 +13,7 @@ function NavBar() {
     <nav className="bg-gray-800 text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="space-x-4">
+          <Link to="/" className="text-2xl font-bold">Options Viz</Link>
           <Link to="/option-page" className="py-2 px-4 rounded bg-blue-500 hover:bg-blue-700 transition duration-300">Option Page</Link>
          
         </div>

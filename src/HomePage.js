@@ -10,7 +10,7 @@ function HomePage() {
         <div className="min-h-screen bg-gray-800 flex justify-center items-center">
             <div className="text-center">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Market Mosaic
+                Options Viz
                 </h1>
             <button
                 onClick={() => navigate('/option-page')}

@@ -7,24 +7,10 @@ function OptionPage() {
     const [optionsChain, setOptionsChain] = useState({ calls: [], puts: [] });
     const [ticker, setTicker] = useState('');
 
-    useEffect(() => {
-        if (ticker) { // Only fetch if ticker is not empty
-            fetch(`/api/get_option_chain/${ticker}`)
-                .then((response) => response.json())
-                .then((data) => setOptionsChain(data))
-                .catch((error) => console.error('Error fetching options chain:', error));
-        }
-    }, [ticker]);
 
     const handleTickerSubmit = (submittedTicker) => {
         console.log('ticker submitted: ', submittedTicker);
         setTicker(submittedTicker);
-    }
-
-    const handleSubmit = (e) => {
-        e.PreventDefault();
-
-        console.log('fetching options chain for ticker: ', ticker);
     }
 
     return(
