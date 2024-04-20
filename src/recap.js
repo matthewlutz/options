@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useRef, useMemo} from 'react';
-import logoImage from './Screenshot 2024-04-01 194038.png';
+import logoImage from './monetaryLogo.png';
 
 
 function Recap() {
