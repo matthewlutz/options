@@ -44,7 +44,7 @@ function Customize({onCustomSubmit}){
                     </div>
 
                 </div>
-                <div className="mb-3 flex justify-between items-center">
+                {/*<div className="mb-3 flex justify-between items-center">
                     <div className="flex-1 mr-2 w-1/4">
                         <label htmlFor="interestRate" className="block text-sm font-medium">
                             Interest Rate (%)
@@ -62,7 +62,7 @@ function Customize({onCustomSubmit}){
                             Specify the annual interest rate for more accurate pricing. Default is 5.28
                         </p>
                     </div>
-                </div>
+                </div>*/}
                 <div className="flex justify-center">
                     <button
                         type="submit"
